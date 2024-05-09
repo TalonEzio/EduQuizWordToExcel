@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="GemBox.Document">
+      <HintPath>D:\Tool\GemBox.Bundle v47.0.1012\net6.0-windows7.0\GemBox.Document.dll</HintPath>
+    </Reference>
+    <Reference Include="GemBox.Email">
+      <HintPath>D:\Tool\GemBox.Bundle v47.0.1012\net6.0-windows7.0\GemBox.Email.dll</HintPath>
+    </Reference>
+    <Reference Include="GemBox.Imaging">
+      <HintPath>D:\Tool\GemBox.Bundle v47.0.1012\net6.0-windows7.0\GemBox.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="GemBox.Pdf">
+      <HintPath>D:\Tool\GemBox.Bundle v47.0.1012\net6.0-windows7.0\GemBox.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="GemBox.Presentation">
+      <HintPath>D:\Tool\GemBox.Bundle v47.0.1012\net6.0-windows7.0\GemBox.Presentation.dll</HintPath>
+    </Reference>
+    <Reference Include="GemBox.Spreadsheet">
+      <HintPath>D:\Tool\GemBox.Bundle v47.0.1012\net6.0-windows7.0\GemBox.Spreadsheet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Chương trình dịch.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
