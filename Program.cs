@@ -1,4 +1,5 @@
 ﻿using System.Runtime.Versioning;
+using System.Text;
 using System.Text.RegularExpressions;
 using GemBox.Document;
 using GemBox.Spreadsheet;
@@ -10,12 +11,37 @@ namespace WordToExcel
     {
         static async Task Main()
         {
+            Console.InputEncoding = Console.OutputEncoding = Encoding.Unicode;
             ComponentInfo.SetLicense("TALONEZIO-CRACKED-HEHE");
-            var questions = await ReadQuestionFromWord("Chương trình dịch.doc");
-            await ExportToExcel(questions,"Chương trình dịch.xlsx");
+            var questions = await ReadQuestionFromWord("Mạng không dây và di động.doc");
+            await ExportToExcelSplit(questions.ToList(), "Mạng không dây và di động.doc");
+
+            var questions2 = await ReadQuestionFromWord("Chương trình dịch.doc");
+            await ExportToExcelSplit(questions2.ToList(), "Chương trình dịch.doc");
         }
+
+        private static async Task ExportToExcelSplit(List<Question> questions, string fileName, int itemPerPage = 100)
+        {
+            fileName = Path.GetFileNameWithoutExtension(fileName);
+
+            var pageCount = (int)Math.Ceiling((double)questions.Count() / itemPerPage);
+            var exportTasks = new List<Task>();
+
+            for (var i = 0; i < pageCount; i++)
+            {
+                var group = questions.Skip(i * itemPerPage).Take(itemPerPage);
+                var groupFileName = $"{fileName}_{i + 1}.xlsx"; // Bắt đầu từ 1
+                exportTasks.Add(ExportToExcel(group, groupFileName));
+            }
+
+            await Task.WhenAll(exportTasks);
+        }
+
+
+
         private static Task ExportToExcel(IEnumerable<Question> questions, string fileName)
         {
+            fileName = Path.ChangeExtension(fileName, ".xlsx");
             SpreadsheetInfo.SetLicense("TalonEzio-Cracked-Hehe");
 
             var workbook = new ExcelFile();
@@ -47,7 +73,7 @@ namespace WordToExcel
                 Directory.CreateDirectory(directory);
             }
 
-            string filePath = Path.Combine(directory, fileName);
+            var filePath = Path.Combine(directory, fileName);
             workbook.Save(filePath);
             Console.WriteLine($"Export hoàn tất: {filePath}");
             return Task.CompletedTask;
@@ -62,7 +88,6 @@ namespace WordToExcel
 
             var content = document.Content.ToString();
 
-            content = content.Replace("\t*\r\n", "*").Replace("\t","").Replace("\uf0b7","");
             string[] questionContents = content.Split(["Câu hỏi"], StringSplitOptions.RemoveEmptyEntries);
 
             foreach (var questionContent in questionContents)
@@ -73,6 +98,19 @@ namespace WordToExcel
 
                 string questionInput = questionContent[(indexOfFirstNewLine + 1)..].Trim('\n');
 
+                questionInput = questionInput.Replace("*\r\n", "*")
+                    .Replace("\uf0b7", "");
+
+                int indexAnswer = 0;
+                var findValue = "\t";
+                while (questionInput.IndexOf(findValue, StringComparison.Ordinal) >= 0)
+                {
+                    int tabIndex = questionInput.IndexOf(findValue, StringComparison.Ordinal);
+                    questionInput = questionInput.Remove(tabIndex, 1).Insert(tabIndex, $"{(char)(indexAnswer++ + 'A')}. ");
+                }
+
+
+
                 var questionSplit = questionInput.Split("\n");
 
                 //chỉ tìm câu hỏi có 4 câu trả lời, câu có 3 câu trả lời bỏ qua
@@ -81,11 +119,11 @@ namespace WordToExcel
 
                 var question = new Question()
                 {
-                    Title = questionSplit[0].Split(" : ", StringSplitOptions.RemoveEmptyEntries)[^1],
-                    AnswerA = questionSplit[1].TrimStart('*').Split(' ',2)[^1].Trim(),
-                    AnswerB = questionSplit[2].TrimStart('*').Split(' ', 2)[^1].Trim(),
-                    AnswerC = questionSplit[3].TrimStart('*').Split(' ', 2)[^1].Trim(),
-                    AnswerD = questionSplit[4].TrimStart('*').Split(' ', 2)[^1].Trim(),
+                    Title = questionSplit[0],
+                    AnswerA = questionSplit[1].Split(' ',2)[^1].TrimStart('*').Trim(),
+                    AnswerB = questionSplit[2].Split(' ', 2)[^1].TrimStart('*').Trim(),
+                    AnswerC = questionSplit[3].Split(' ', 2)[^1].TrimStart('*').Trim(),
+                    AnswerD = questionSplit[4].Split(' ', 2)[^1].TrimStart('*').Trim(),
                     Answer = FindCorrectAnswer(questionInput)
                 };
 
@@ -104,7 +142,7 @@ namespace WordToExcel
         }
         private static string FindCorrectAnswer(string answerOptions)
         {
-            var pattern = @"\*(\w)\.";
+            var pattern = @"(\w)\. \*";
 
             var match = Regex.Match(answerOptions, pattern);
 
