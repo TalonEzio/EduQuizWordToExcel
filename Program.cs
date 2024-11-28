@@ -3,6 +3,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using GemBox.Document;
 using GemBox.Spreadsheet;
+using SlugGenerator;
 
 namespace WordToExcel
 {
@@ -13,14 +14,119 @@ namespace WordToExcel
         {
             Console.InputEncoding = Console.OutputEncoding = Encoding.Unicode;
             ComponentInfo.SetLicense("TALONEZIO-CRACKED-HEHE");
-            var questions = await ReadQuestionFromWord("Mạng không dây và di động.doc");
-            await ExportToExcelSplit(questions.ToList(), "Mạng không dây và di động.doc");
+            var questions = (await ReadQuestionFromWord("Công nghệ điện toán đám mây.doc")).ToList();
 
-            var questions2 = await ReadQuestionFromWord("Chương trình dịch.doc");
-            await ExportToExcelSplit(questions2.ToList(), "Chương trình dịch.doc");
+            var otherQuestions = ParseQuestionsFromFile("trac-nghiem-cloud.txt");
+
+            questions.AddRange(otherQuestions);
+
+            questions = FilterQuestionsBySlug(questions!)!;
+
+            await ExportToNineQuizExcel(questions, "Cloud Full.xlsx");
+
+            await ExportToNineQuizExcelSplit(questions, "Công nghệ điện toán đám mây.xlsx");
+
+            //await ExportToEduQuizText(questions, "output.txt");
+
+            ImportQuestionsToQuizizz(questions!, "Cloud Quizizz.xlsx");
+
         }
 
-        private static async Task ExportToExcelSplit(List<Question> questions, string fileName, int itemPerPage = 100)
+        private static void ImportQuestionsToQuizizz(IEnumerable<Question> questions, string outputFile)
+        {
+            var workbook = ExcelFile.Load("QuizizzTemplate.xlsx");
+
+            var worksheet = workbook.Worksheets[0];
+
+            worksheet.Rows.Remove(1, worksheet.Rows.Count - 1);
+
+            var row = 1;
+
+            foreach (var question in questions)
+            {
+
+
+                worksheet.Cells[row, 0].Value = question.Title;
+
+                worksheet.Cells[row, 1].Value = "Multiple Choice";
+
+                worksheet.Cells[row, 2].Value = question.AnswerA;
+                worksheet.Cells[row, 3].Value = question.AnswerB;
+                worksheet.Cells[row, 4].Value = question.AnswerC;
+                worksheet.Cells[row, 5].Value = question.AnswerD;
+
+
+                worksheet.Cells[row, 7].Value = question.Answer == "A" ? "1" : question.Answer == "B" ? "2" : question.Answer == "C" ? "3" : "4";
+                row++;
+            }
+
+            workbook.Save(outputFile);
+        }
+
+        private static async Task ExportToEduQuizText(List<Question?> questions, string outputTxt)
+        {
+            var stringBuilder = new StringBuilder();
+            foreach (var question in questions.OfType<Question>())
+            {
+                stringBuilder.AppendLine(question.Title);
+
+                var answers = new List<string> { question.AnswerA, question.AnswerB, question.AnswerC, question.AnswerD };
+                var correctAnswer = question.Answer;
+
+                foreach (var answer in answers)
+                {
+                    if (answer == GetAnswerText(correctAnswer, question))
+                    {
+                        stringBuilder.AppendLine($"* {answer}");
+                    }
+                    else
+                    {
+                        stringBuilder.AppendLine(answer);
+                    }
+                }
+
+                stringBuilder.AppendLine();  // Dòng trống giữa các câu hỏi
+            }
+
+            await File.WriteAllTextAsync(outputTxt, stringBuilder.ToString());
+        }
+        private static string GetAnswerText(string correctAnswer, Question question)
+        {
+            return correctAnswer switch
+            {
+                "A" => question.AnswerA,
+                "B" => question.AnswerB,
+                "C" => question.AnswerC,
+                "D" => question.AnswerD,
+                _ => string.Empty
+            };
+        }
+
+        public static List<Question> FilterQuestionsBySlug(List<Question> questions)
+        {
+            questions = questions.Select(q =>
+                {
+                    var answers = new[] { q.AnswerA, q.AnswerB, q.AnswerC, q.AnswerD }
+                        .Where(a => !string.IsNullOrEmpty(a))
+                        .OrderBy(a => a.Length)
+                        .ToArray();
+
+                    var answersSlug = string.Join("-", answers.Select(a => a.GenerateSlug()));
+                    var questionSlug = $"{q.Title.GenerateSlug()}-{answersSlug}";
+
+                    return new
+                    {
+                        Question = q,
+                        Slug = questionSlug
+                    };
+                })
+                .DistinctBy(x => x.Slug)
+                .Select(x => x.Question)
+                .ToList();
+
+            return questions;
+        }
+        private static async Task ExportToNineQuizExcelSplit(List<Question?> questions, string fileName, int itemPerPage = 100)
         {
             fileName = Path.GetFileNameWithoutExtension(fileName);
 
@@ -30,16 +136,13 @@ namespace WordToExcel
             for (var i = 0; i < pageCount; i++)
             {
                 var group = questions.Skip(i * itemPerPage).Take(itemPerPage);
-                var groupFileName = $"{fileName}_{i + 1}.xlsx"; // Bắt đầu từ 1
-                exportTasks.Add(ExportToExcel(group, groupFileName));
+                var groupFileName = $"{fileName}_{i + 1}.xlsx";
+                exportTasks.Add(ExportToNineQuizExcel(group, groupFileName));
             }
 
             await Task.WhenAll(exportTasks);
         }
-
-
-
-        private static Task ExportToExcel(IEnumerable<Question> questions, string fileName)
+        private static Task ExportToNineQuizExcel(IEnumerable<Question?> questions, string fileName)
         {
             fileName = Path.ChangeExtension(fileName, ".xlsx");
             SpreadsheetInfo.SetLicense("TalonEzio-Cracked-Hehe");
@@ -78,9 +181,37 @@ namespace WordToExcel
             Console.WriteLine($"Export hoàn tất: {filePath}");
             return Task.CompletedTask;
         }
-        private static Task<IEnumerable<Question>> ReadQuestionFromWord(string path)
+        public static List<Question> ParseQuestionsFromFile(string filePath)
         {
-            var tsc = new TaskCompletionSource<IEnumerable<Question>>();
+            var questions = new List<Question>();
+            var lines = File.ReadAllLines(filePath);
+
+            for (int i = 0; i <= lines.Length; i += 6)
+            {
+                var question = new Question()
+                {
+                    Title = lines[i],
+                    AnswerA = lines[i + 1].TrimStart('*', ' '),
+                    AnswerB = lines[i + 2].TrimStart('*', ' '),
+                    AnswerC = lines[i + 3].TrimStart('*', ' '),
+                    AnswerD = lines[i + 4].TrimStart('*', ' '),
+                };
+                for (int j = i + 1; j <= i + 4; ++j)
+                {
+                    if (lines[j].StartsWith("*"))
+                    {
+                        question.Answer = ((char)(j % 6 - 1 + 65)).ToString();
+                        questions.Add(question);
+                        break;
+                    }
+                }
+            }
+
+            return questions;
+        }
+        private static Task<IEnumerable<Question?>> ReadQuestionFromWord(string path)
+        {
+            var tsc = new TaskCompletionSource<IEnumerable<Question?>>();
 
             var questions = new List<Question>();
 
@@ -113,17 +244,31 @@ namespace WordToExcel
 
                 var questionSplit = questionInput.Split("\n");
 
-                //chỉ tìm câu hỏi có 4 câu trả lời, câu có 3 câu trả lời bỏ qua
-                if (questionSplit.Length < 5) 
+                if (questionSplit.Length < 5)
                     continue;
+
+                // Làm sạch chuỗi đầu vào
+                string input = questionSplit[0].Replace(" []:", ":").Trim();
+
+                // Regex để lấy nội dung câu hỏi
+                string pattern = @"Câu\s\d+:\s(.+)";
+                var matches = Regex.Matches(input, pattern);
+
+                // Lấy tiêu đề dựa trên số lượng match
+                string title = matches.Count >= 2
+                    ? matches[1].Groups[1].Value // Lấy nội dung từ nhóm bắt thứ nhất
+                    : matches.Count == 1
+                        ? matches[0].Groups[1].Value // Lấy nội dung nếu chỉ có 1 match
+                        : input; // Nếu không có match, dùng toàn bộ chuỗi gốc
+
 
                 var question = new Question()
                 {
-                    Title = questionSplit[0],
-                    AnswerA = questionSplit[1].Split(' ',2)[^1].TrimStart('*').Trim(),
-                    AnswerB = questionSplit[2].Split(' ', 2)[^1].TrimStart('*').Trim(),
-                    AnswerC = questionSplit[3].Split(' ', 2)[^1].TrimStart('*').Trim(),
-                    AnswerD = questionSplit[4].Split(' ', 2)[^1].TrimStart('*').Trim(),
+                    Title = title,
+                    AnswerA = questionSplit[1].Split(' ', 2)[^1].TrimStart('*').Trim().Replace("[<$>] ", "").Replace("a. ", "").Replace("b. ", "").Replace("c. ", "").Replace("d. ", ""),
+                    AnswerB = questionSplit[2].Split(' ', 2)[^1].TrimStart('*').Trim().Replace("[<$>] ", "").Replace("a. ", "").Replace("b. ", "").Replace("c. ", "").Replace("d. ", ""),
+                    AnswerC = questionSplit[3].Split(' ', 2)[^1].TrimStart('*').Trim().Replace("[<$>] ", "").Replace("a. ", "").Replace("b. ", "").Replace("c. ", "").Replace("d. ", ""),
+                    AnswerD = questionSplit[4].Split(' ', 2)[^1].TrimStart('*').Trim().Replace("[<$>] ", "").Replace("a. ", "").Replace("b. ", "").Replace("c. ", "").Replace("d. ", ""),
                     Answer = FindCorrectAnswer(questionInput)
                 };
 

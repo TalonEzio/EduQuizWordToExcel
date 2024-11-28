@@ -8,23 +8,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="SlugGenerator" Version="2.0.2" />
+    <PackageReference Include="Slugify.Core" Version="4.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="GemBox.Document">
-      <HintPath>D:\Tool\GemBox.Bundle v47.0.1012\net6.0-windows7.0\GemBox.Document.dll</HintPath>
+      <HintPath>..\..\..\..\Tools\GemBox.Bundle v47.0.1012\net6.0-windows7.0\GemBox.Document.dll</HintPath>
     </Reference>
     <Reference Include="GemBox.Email">
-      <HintPath>D:\Tool\GemBox.Bundle v47.0.1012\net6.0-windows7.0\GemBox.Email.dll</HintPath>
+      <HintPath>..\..\..\..\Tools\GemBox.Bundle v47.0.1012\net6.0-windows7.0\GemBox.Email.dll</HintPath>
     </Reference>
     <Reference Include="GemBox.Imaging">
-      <HintPath>D:\Tool\GemBox.Bundle v47.0.1012\net6.0-windows7.0\GemBox.Imaging.dll</HintPath>
+      <HintPath>..\..\..\..\Tools\GemBox.Bundle v47.0.1012\net6.0-windows7.0\GemBox.Imaging.dll</HintPath>
     </Reference>
     <Reference Include="GemBox.Pdf">
-      <HintPath>D:\Tool\GemBox.Bundle v47.0.1012\net6.0-windows7.0\GemBox.Pdf.dll</HintPath>
+      <HintPath>..\..\..\..\Tools\GemBox.Bundle v47.0.1012\net6.0-windows7.0\GemBox.Pdf.dll</HintPath>
     </Reference>
     <Reference Include="GemBox.Presentation">
-      <HintPath>D:\Tool\GemBox.Bundle v47.0.1012\net6.0-windows7.0\GemBox.Presentation.dll</HintPath>
+      <HintPath>..\..\..\..\Tools\GemBox.Bundle v47.0.1012\net6.0-windows7.0\GemBox.Presentation.dll</HintPath>
     </Reference>
     <Reference Include="GemBox.Spreadsheet">
-      <HintPath>D:\Tool\GemBox.Bundle v47.0.1012\net6.0-windows7.0\GemBox.Spreadsheet.dll</HintPath>
+      <HintPath>..\..\..\..\Tools\GemBox.Bundle v47.0.1012\net6.0-windows7.0\GemBox.Spreadsheet.dll</HintPath>
     </Reference>
   </ItemGroup>
 
@@ -32,7 +37,16 @@
     <None Update="Chương trình dịch.doc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Công nghệ điện toán đám mây.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Mạng không dây và di động.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QuizizzTemplate.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="trac-nghiem-cloud.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

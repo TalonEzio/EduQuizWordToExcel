@@ -1,0 +1,659 @@
+"Blockchain as a Service" (BaaS) trong điện toán đám mây cung cấp khả năng gì?
+* Cung cấp một nền tảng blockchain mà không cần quản lý cơ sở hạ tầng.
+Một nền tảng cho việc đào tiền điện tử.
+Lưu trữ dữ liệu không thể thay đổi trên các trung tâm dữ liệu truyền thống.
+Bảo mật tăng cường cho cơ sở dữ liệu truyền thống.
+
+Phương án  nào sau đây cần được đàm phán trong Thỏa thuận cấp độ dịch vụ?
+* Tất cả những điều được đề cập
+Kiểm toán
+Tuân thủ quy định
+Ghi nhật ký
+
+Khi nào bạn sẽ sử dụng đám mây riêng?
+Khi bạn muốn giảm chi phí càng nhiều càng tốt.
+Khi bạn không lo lắng về việc quản lý cơ sở hạ tầng.
+Khi bạn muốn chia sẻ dữ liệu với công chúng.
+* Khi bạn cần điều khiển cao độ về an ninh và tuân thủ.
+
+Trong điện toán đám mây thuật ngữ Nền tảng như là dịch vụ được viết tắt là:?
+NaaS
+CaaS
+IaaS
+* PaaS
+
+Trong điện toán đám mây khái niệm nền tảng (Platform) là gì?
+Là toàn bộ phần cứng, phần mềm và quy trình của nhà cung cấp dịch vụ điện toán đám mây
+Là môi trường mà các ứng dụng chạy trên đó.
+Là những công cụ phát triển website mà lập trình viên sử dụng để tạo nên các trang web.
+* Là cách thức mà môi trường điện toán đám mây tương tác đến người dùng.
+
+Đâu là một kiến trúc đám mây được duy trì trong một trung tâm dữ liệu doanh nghiệp.
+Hybrid Cloud
+Public Cloud
+Company cloud
+* Private Cloud
+
+"Policy as Code" trong điện toán đám mây liên quan đến điều gì?
+Mã hóa chính sách bảo mật để ngăn chặn vi phạm dữ liệu.
+Tạo ra mã nguồn mở để chính sách có thể được chia sẻ và sử dụng bởi nhiều tổ chức.
+* Sử dụng mã để tự động hóa việc triển khai và quản lý các chính sách cơ sở hạ tầng.
+Viết mã để tự động tạo chính sách bảo mật.
+
+Đâu Không phải là một thành phần trong nền tảng điện toán đám mây
+Ajax
+* Process
+Web Hosting Service
+Web Application Framework
+
+Tại sao điện toán đám mây có thể giúp tăng cường tính bền vững?
+Bằng cách tập trung vào việc sử dụng cơ sở hạ tầng ảo hóa.
+Bằng cách khuyến khích sử dụng phần cứng nhiều hơn.
+* Bằng cách giảm lượng phế liệu điện tử.
+Bằng cách tăng tiêu thụ năng lượng.
+
+Điều gì xảy ra khi một ứng dụng trong môi trường đám mây gặp sự cố chuyển tiếp địa chỉ IP?
+Tất cả dữ liệu trong ứng dụng sẽ bị mất.
+Ứng dụng không thể được truy cập cho đến khi sự cố được giải quyết.
+Một bản sao lưu tự động của ứng dụng sẽ được khởi chạy.
+* Địa chỉ IP sẽ tự động chuyển đổi sang một máy chủ ảo khác.
+
+Công nghệ ảo hóa là gì trong bối cảnh của điện toán đám mây?
+Mã hóa dữ liệu.
+* Chuyển đổi phần cứng thành phần mềm.
+Tạo ra các phiên bản dự phòng cho dữ liệu.
+Làm giảm dung lượng lưu trữ dữ liệu.
+
+Đâu là API cho các ứng dụng Google?
+Google Document Lists Data API
+Google Contacts Data API
+Google Base Data
+* Google Apps APIs
+
+Trong điện toán đám mây, SLA (Service Level Agreement) đảm bảo điều gì?
+Cấu hình hệ thống không thay đổi theo thời gian.
+Giá cả cố định cho tất cả các dịch vụ đám mây.
+Khả năng tương thích giữa các dịch vụ đám mây khác nhau.
+* Mức độ dịch vụ mà nhà cung cấp cam kết cung cấp.
+
+"Data Lakes" trong điện toán đám mây có chức năng gì?
+Đồng bộ hóa dữ liệu từ nhiều nguồn khác nhau.
+* Lưu trữ lượng lớn dữ liệu cấu trúc và không cấu trúc để phân tích.
+Phân tích dữ liệu lớn mà không cần lưu trữ.
+Lưu trữ dữ liệu không cấu trúc một cách an toàn và bảo mật.
+
+Các mô hình triển khai điện toán đám mây không bao gồm loại nào sau đây?
+Đám mây công cộng
+* Đám mây ngẫu nhiên
+Đám mây riêng
+Đám mây lai
+
+Mô hình "Pay-as-you-go" trong điện toán đám mây có lợi ích gì?
+Khách hàng phải trả một khoản phí cố định mỗi tháng.
+* Khách hàng chỉ trả tiền cho những gì họ sử dụng.
+Khách hàng phải trả một khoản phí trước cho tất cả các dịch vụ.
+Khách hàng có quyền sở hữu phần cứng.
+
+Trong điện toán đám mây, "CaaS" (Containers as a Service) khác với "PaaS" (Platform as a Service) như thế nào?
+CaaS cung cấp môi trường lập trình, trong khi PaaS cung cấp môi trường container.
+CaaS thường yêu cầu quản trị hệ thống, trong khi PaaS không yêu cầu.
+CaaS hỗ trợ đóng gói và triển khai ứng dụng, trong khi PaaS cung cấp cơ sở hạ tầng ảo hóa.
+* CaaS cung cấp quản lý container cấp cao, trong khi PaaS tập trung vào quản lý ứng dụng và dịch vụ.
+
+Phương án nào sau dây cho phép xử lý hàng loạt, giúp tăng tốc đáng kể các ứng dụng xử lý cao.
+Tính mềm dẻo
+Tiện ích
+* Khả năng mở rộng
+Độ tin cậy
+
+"Immutable Infrastructure" trong bối cảnh điện toán đám mây có nghĩa là gì?
+Cơ sở hạ tầng có thể thay đổi bất cứ lúc nào.
+Cơ sở hạ tầng không cần bảo trì hoặc cập nhật.
+* Cơ sở hạ tầng không thể thay đổi sau khi được triển khai.
+Cơ sở hạ tầng tự hủy sau một thời gian sử dụng nhất định.
+
+Tính năng nào sau đây không phải là một phần của mô hình dịch vụ điện toán đám mây FaaS (Function as a Service)?
+Tự động mở rộng theo sự kiện.
+Thanh toán dựa trên thời gian thực thi mã.
+* Cung cấp một hệ điều hành ảo.
+Quản lý tài nguyên cơ sở hạ tầng.
+
+"Elasticity" trong điện toán đám mây nghĩa là gì?
+Khả năng một dịch vụ đám mây hồi phục sau sự cố.
+* Khả năng một dịch vụ đám mây mở rộng hoặc thu nhỏ tài nguyên tự động.
+Khả năng một dịch vụ đám mây chống lại các cuộc tấn công mạng.
+Khả năng một dịch vụ đám mây giữ vững hiệu suất dưới tải cao.
+
+Dịch vụ Azure File Storage là dịch vụ gì?
+Lưu trữ có khả năng thay đổi quy mô trên đám mây
+Lưu trữ chi phí thấp trên đám mây
+* Chia sẻ file bằng giao thức SMB 3.0
+Ổ đĩa lưu trữ dạng khối EC2
+
+Dịch vụ đám mây bao gồm
+Phần cứng, nền tảng, phần mềm
+Phần mềm, phần cứng, cơ sở hạ tầng
+* Nền tảng, phần mềm, cơ sở hạ tầng
+Nền tảng, phần cứng, cơ sở hạ tầng
+
+Điện toán đám mây là gì?
+Một phần mềm antivirus.
+* Một mô hình cung cấp tài nguyên máy tính qua Internet.
+Một hệ điều hành dựa trên web.
+Một dịch vụ lưu trữ trực tuyến.
+
+Trong điện toán đám mây thuật ngữ Phần mền như là dịch vụ được viết tắt là:?
+IaaS
+* SaaS
+CaaS
+NaaS
+
+Trong điện troán đám mây, SaaS có nghĩa là gì?
+Nền tảng như là dịch vụ
+* Phần mềm như là dịch vụ
+Cơ sở hạ tầng như là dịch vụ
+Giao tiếp như là dịch vụ
+
+Công nghệ nào sau đây không phải là một phần cơ bản của điện toán đám mây?
+* Blockchain
+Tự động hóa
+Broadband Internet
+Ảo hóa
+
+Điện toán đám mây giúp giảm chi phí như thế nào?
+* Bằng cách loại bỏ cần thiết phải mua phần cứng trước.
+Bằng cách tăng giá cả dịch vụ.
+Bằng cách tăng nhu cầu về bảo trì phần cứng.
+Bằng cách yêu cầu đầu tư vốn lớn hơn.
+
+"Measured Service" trong điện toán đám mây có nghĩa là gì?
+Dịch vụ được đo lường và tối ưu hóa cho từng người dùng cụ thể.
+* Dịch vụ có sự cân nhắc về mặt chi phí dựa trên sự sử dụng thực tế.
+Dịch vụ được đo lường để đảm bảo an toàn dữ liệu.
+Dịch vụ chỉ có sẵn cho một số lượng người dùng đo lường trước.
+
+Trong ngữ cảnh điện toán đám mây, "Multi-tenancy" nghĩa là gì?
+Nhiều người dùng có thể truy cập một máy chủ duy nhất.
+Một người dùng có thể truy cập nhiều máy chủ.
+* Một dịch vụ được chia sẻ giữa nhiều người thuê khác nhau.
+Mỗi người thuê có một máy chủ riêng biệt.
+
+Đâu là một trong những ưu điểm chính của điện toán đám mây?
+Tốc độ thấp.
+Cố định tài nguyên.
+An ninh dữ liệu yếu.
+* Tính linh hoạt và quy mô.
+
+Trong điện toán đám mây, "Data Gravity" là gì?
+Sự phụ thuộc giữa các loại dữ liệu khác nhau.
+* Khả năng lưu trữ dữ liệu tăng theo thời gian và khó chuyển đổi.
+Lực hấp dẫn giữa dữ liệu và các ứng dụng trong trung tâm dữ liệu.
+Trọng lượng vật lý của dữ liệu khi được lưu trữ.
+
+Ở cấp độ sơ đẳng nhất, cần bao nhiêu máy chủ kết nối Internet là có thể triển khai dịch vụ lưu trữ đám mây?
+* Một máy
+Bốn máy
+Hai máy
+Ba máy
+
+Autoscaling trong điện toán đám mây hoạt động dựa trên nguyên tắc nào?
+Máy chủ được thêm vào chỉ khi có sự cố hệ thống.
+* Máy chủ được thêm hoặc loại bỏ dựa trên cường độ sử dụng.
+Máy chủ được thêm vào khi người quản trị hệ thống quyết định.
+Máy chủ được thêm vào hệ thống theo lịch trình cố định.
+
+Trong Google Apps ứng dụng nào cho phép tạo ra các câu hỏi khảo sát tới người dùng?
+Google Docs
+Google Sheet
+Google Survey
+* Google Form
+
+Công nghệ "Edge Computing" trong điện toán đám mây có mục đích gì chính?
+Tối ưu hóa không gian lưu trữ trong trung tâm dữ liệu.
+* Xử lý dữ liệu gần nguồn phát sinh để giảm độ trễ.
+Giảm chi phí trung tâm dữ liệu.
+Tăng cường bảo mật thông tin bằng cách giữ dữ liệu gần người dùng hơn.
+
+Các doanh nghiệp vừa và nhỏ muốn tận dụng cả hiệu quả chi phí và bảo mật dữ liệu mạnh mẽ, kiểm soát và quyền riêng tư nên chọn mô hình nào?
+Community Cloud
+* Hybrid Cloud
+Private Cloud
+Public Cloud
+
+Điểm yếu nào sau đây là một mối quan ngại lớn khi sử dụng điện toán đám mây?
+Tính linh hoạt
+* Vấn đề về quyền riêng tư và an ninh
+Tính năng tự động hóa
+Khả năng mở rộng
+
+Đâu là một ví dụ về IaaS?
+* AWS EC2
+Salesforce CRM
+Google Docs
+Microsoft Office 365
+
+Các "Containers" trong điện toán đám mây cung cấp lợi ích gì?
+Tự động hóa việc cập nhật phần mềm.
+Giảm chi phí bằng cách sử dụng ít băng thông hơn.
+* Tính di động cao cho ứng dụng và dễ dàng triển khai trên nhiều môi trường.
+Tăng cường bảo mật thông qua việc tách biệt hoàn toàn với hệ điều hành.
+
+"Quantum Computing" có tiềm năng thay đổi điện toán đám mây như thế nào?
+* Bằng cách cải thiện đáng kể khả năng xử lý dữ liệu và giải quyết các vấn đề phức tạp.
+Bằng cách giảm hiệu quả của các thuật toán mã hóa hiện nay.
+Bằng cách làm giảm sự cần thiết của điện toán đám mây.
+Bằng cách cung cấp tính toán với tốc độ chậm hơn để tiết kiệm năng lượng.
+
+Mạng SDN (Storage Delivery Network) mang lại lợi ích gì?
+Ra quyết định định tuyến một cách tối ưu
+* Lưu trữ, phân phối và xử lý yêu cầu lưu trữ một cách tối ưu
+Lưu trữ tại nhiều máy chủ do vậy không bị mất dữ liệu
+Đảm bảo bảo mật cho các dữ liệu khi di chuyển trên đường truyền
+
+Phương pháp chủ đạo được các công ty cung cấp dịch vụ cloud sử dụng để đối phó với nguy cơ xảy ra cho trung tâm dữ liệu của họ?
+Dự phòng nguồn điện
+* Lưu trữ phân tán
+Khôi phục nhanh
+Dự phòng đường truyền
+
+Đám mây công cộng khác với đám mây riêng ở điểm nào chính?
+Đám mây công cộng ít an toàn hơn đám mây riêng.
+Đám mây công cộng do một tổ chức duy nhất sở hữu và vận hành.
+Đám mây công cộng không cung cấp dịch vụ tự phục vụ.
+* Đám mây công cộng dành cho nhiều khách hàng khác nhau.
+
+Kỹ thuật "Canary Releases" trong phát triển phần mềm đám mây được sử dụng để:
+Phân phối phần mềm qua các kênh không chính thức.
+Phân phối một phiên bản mới cho tất cả người dùng cùng một lúc.
+* Phân phối một phiên bản mới cho một nhóm nhỏ người dùng để kiểm tra trước khi triển khai rộng rãi.
+Cập nhật bí mật các phiên bản mới mà không thông báo cho người dùng.
+
+Tính "Idempotency" của API đám mây có ý nghĩa như thế nào?
+Một yêu cầu API luôn trả về kết quả khác nhau mỗi lần gửi.
+Một yêu cầu API cần được xác nhận bởi người dùng.
+Một yêu cầu API có thể thay đổi mỗi lần gửi dựa trên thời gian.
+* Một yêu cầu API có thể được gửi nhiều lần mà không thay đổi kết quả cuối cùng.
+
+G Suite là bộ công cụ điện toán đám mây của hãng nào?
+Apple
+* Google
+IBM
+Go Daddy
+
+Đám mây nào sau đây có tính bảo mật cao nhất
+Public Cloud
+Community Cloud
+* Private Cloud
+Hybrid Cloud
+
+HTML là gì?
+Là ngôn ngữ sử dụng để viết các đặc tả tiện ích
+* Là ngôn ngữ đánh dấu để định dạng trang web
+Là ngôn ngữ kịch bản bạn có thể sử dụng để thêm tương tác cho ứng dụng
+Ngôn ngữ đánh dấu tổng quát của Google
+
+Trong điện troán đám mây, CaaS có nghĩa là gì?
+* Giao tiếp như là dịch vụ
+Phần mềm như là dịch vụ
+Nền tảng như là dịch vụ
+Cơ sở hạ tầng như là dịch vụ
+
+Đám mây nào sau đây có tính bảo mật cao nhất
+* Private Cloud
+Public Cloud
+Hybrid Cloud
+Community Cloud
+
+Điều nào sau đây là đúng với điện toán đám mây?
+Nó sẽ luôn rẻ hơn và an toàn hơn so với máy tính cục bộ.
+* Bạn có thể truy cập dữ liệu của mình từ bất kỳ máy tính nào trên thế giới, miễn là bạn có kết nối Internet.
+Bạn có thể truy cập dữ liệu của mình từ bất kỳ máy tính nào trên thế giới
+Chỉ có một vài công ty nhỏ đang đầu tư vào công nghệ, làm cho nó trở thành một công việc mạo hiểm.
+
+Trong số các trình duyệt dưới đây, trình duyệt nào được phát triển để trở thành công cụ điện toán đám mây?
+Firefox
+Safari
+* Chrome
+IE
+
+Đâu là đám mây mà trong đó Hạ tầng đám mây được sử dụng bởi môt số tổ chức cộng đồng người dùng
+Public Cloud
+Hybrid Cloud
+* Community Cloud
+Private Cloud
+
+Dịch vụ lưu trữ có tên CloudNAS là của công ty nào?
+Vingroup
+Amazon
+Microsoft
+* MorroData
+
+Lĩnh vực nào sau đây là lĩnh vực quan trọng nhất cần quan tâm trong điện toán đám mây?
+Kho lưu trữ (Storage)
+* Bảo mật (Security)
+Tất cả những điều đã đề cập
+Khả năng mở rộng (Scalability)
+
+Thuật ngữ “cloud computing” ra đời năm nào?
+Năm 2006
+* Năm 2007
+Năm 2008
+Năm 2009
+
+_________ là một dịch vụ điện toán đám mây bao gồm cả phần cứng và phần mềm.
+mô hình
+dịch vụ
+* nền tảng
+tất cả những điều đã đề cập ở trên
+
+Nguyên tắc thiết kế hệ thống phân tán coi sự cố từ các thành phần là một trạng thái hoạt động bình thường và tiếp tục vận hành mà hoàn toàn không hoặc có tối thiểu sự gián đoạn, được gọi là nguyên tắc gì?
+Kiểm soát song song
+Đơn giản
+Trách nhiệm cục bộ
+* Chịu lỗi
+
+Phương án  nào sau đây cần được đàm phán trong Thỏa thuận cấp độ dịch vụ?
+Tuân thủ quy định
+* Tất cả những điều được đề cập
+Ghi nhật ký
+Kiểm toán
+
+Google Gadget là gì?
+Giao thức truy cập đối tượng đơn giản của Google
+Là chương trình ứng dụng để tìm kiếm nội dung web
+Ngôn ngữ đánh dấu tổng quát của Google
+* Là nội dung web động có thể được nhúng trên một trang web
+
+BigTable là một hệ quản trị cơ sở dữ liệu của hãng nào?
+Microsoft
+Amazon
+Vingroup
+* Google
+
+Đâu không phải là nhược điểm của điện toán đám mây
+An toàn dữ liệu
+Khả năng bảo mật
+Tính riêng tư
+* Dễ sử dụng, tiện lợi
+
+Chỉ ra phát biểu sai.
+Không có nội dung nào được đề cập
+Với điện toán đám mây, bạn có thể bắt đầu rất nhỏ và trở nên lớn rất nhanh
+* Tất cả các ứng dụng đều được hưởng lợi từ việc triển khai trên đám mây
+Điện toán đám mây là một cuộc cách mạng, ngay cả khi công nghệ mà nó được xây dựng trên đó là một sự tiến hoá
+
+Các đối tượng lưu trữ trên đám mây được lưu trữ truy xuất thông qua yếu tố nào?
+ULR
+Địa chỉ IPv4
+* Khóa
+Địa chỉ IPv6
+
+Công nghệ máy ảo nào sau đây thuộc sở hữu của Oracle, có thể chạy nhiều hệ điều hành khác nhau?
+Không có nội dung nào được đề cập ở trên
+ThoughtPolice
+* VirtualBox
+Vmachines
+
+Azure Cloud là giải pháp đám mây của hãng nào?
+Cisco
+Apple
+* Microsoft
+Amazone
+
+Chỉ ra phát biểu sai.
+Các ứng dụng SaaS có đủ hình dạng và kích cỡ
+* Không có nội dung nào được đề cập
+Mọi người dùng máy tính đều quen thuộc với hệ thống SaaS
+Phần mềm SaaS không thể tùy chỉnh
+
+Chỉ ra phát biểu đúng.
+* Tất cả những điều đã đề cập ở trên
+SaaS là phần mềm tương đương dựa trên đám mây của phần mềm được đóng gói.
+Phần mềm như một dịch vụ (SaaS) có thể được mô tả ngắn gọn là phần mềm được triển khai trên một dịch vụ được lưu trữ
+Nền tảng có thể dựa trên các loại ngôn ngữ phát triển cụ thể, framework ứng dụng hoặc các cấu trúc khác
+
+Thuật ngữ 'Cloud' trong điện toán đám mây dùng để chỉ ______.
+Mây tích
+Một máy chủ
+* Internet
+Dịch vụ cung cấp máy chủ
+
+Chỉ ra phát biểu đúng.
+Khi nhà phát triển tạo ứng dụng sử dụng dịch vụ đám mây, nhà phát triển không thể đính kèm với dịch vụ thích hợp
+Các ứng dụng không cần quan tâm đến cách chúng sử dụng tài nguyên đám mây
+Tất cả những điều đã đề cập
+* Máy ảo là vùng chứa được chỉ định tài nguyên cụ thể
+
+Dịch vụ Azure Data Explorer là dịch vụ gì?
+Chia sẻ file bằng giao thức SMB 3.0
+Lưu trữ chi phí thấp trên đám mây
+Ổ đĩa lưu trữ dạng khối EC2
+* Dịch vụ khai phá dữ liệu
+
+Phương pháp chủ đạo được các công ty cung cấp dịch vụ cloud sử dụng để đối phó với nguy cơ xảy ra cho trung tâm dữ liệu của họ?
+Dự phòng đường truyền
+Dự phòng nguồn điện
+* Lưu trữ phân tán
+Khôi phục nhanh
+
+Một nhóm người dùng trong một phiên bản cụ thể được gọi là ______________
+tất cả những điều đã đề cập ở trên
+superuser
+* pod (được triển khai cho single node)
+suser
+
+Đâu không phải là ưu điểm của điện toán đám mây
+* An toàn dữ liệu
+Tận dụng tối đa tài nguyên
+Dễ sử dụng, tiện lợi
+Giảm chi phí
+
+Đặc điểm nào sau đây là đặc điểm của SaaS?
+* Tất cả những điều đã đề cập
+Giấy phép thông thường dựa trên đăng ký hoặc dựa trên việc sử dụng và được lập hóa đơn định kỳ
+Phần mềm có sẵn trên Internet trên toàn cầu thông qua trình duyệt theo yêu cầu
+Phần mềm và dịch vụ được giám sát và duy trì bởi nhà cung cấp
+
+Ưu điểm của việc lưu trữ online là gì?
+Không bị nhiễm virus
+* Truy cập mọi lúc mọi nơi
+Không mất mát dữ liệu
+Không bị sửa đổi
+
+Các ứng dụng _________ có rào cản gia nhập thấp hơn nhiều so với các đối thủ được cài đặt cục bộ của chúng.
+IaaS
+CaaS (Container-as-a-Service)
+PaaS
+* Không có nội dung nào được đề cập
+
+Amazon Elastic Block Store là dịch vụ gì?
+Hệ thống tệp tin được quản lý toàn phần cho EC2
+* Ổ đĩa lưu trữ dạng khối EC2
+Lưu trữ chi phí thấp trên đám mây
+Lưu trữ có khả năng thay đổi quy mô trên đám mây
+
+Ví dụ nào sau đây là ví dụ cổ điển về mô hình dịch vụ IaaS?
+Azure
+* AWS
+Cloudera
+Tất cả những điều đã đề cập ở trên
+
+Các doanh nghiệp vừa và nhỏ muốn tận dụng cả hiệu quả chi phí và bảo mật dữ liệu mạnh mẽ, kiểm soát và quyền riêng tư nên chọn mô hình nào?
+Private Cloud
+Public Cloud
+* Hybrid Cloud
+Community Cloud
+
+Đâu không phải là kỹ thuật để đảm bảo tính an ninh khi lưu trữ dữ liệu trên đám mây?
+Xác thực
+Mã hóa
+* Sử dụng khóa
+Phân quyền
+
+Đâu là một kiến trúc đám mây được duy trì trong một trung tâm dữ liệu doanh nghiệp.
+Public Cloud
+Company cloud
+Hybrid Cloud
+* Private Cloud
+
+Các kỹ thuật phát triển web được sử dụng để tạo ra các ứng dụng web tương tác là chức năng của thành phần nào?
+Web Application Framework
+Web Browser
+Web Hosting Service
+* Ajax
+
+Nhược điểm lớn nhất của BigTabe là gì?
+Khả năng lưu trữ bị giới hạn
+Độ bảo mật chưa cao
+* Là một hệ thống độc quyền
+Khả năng xử lý còn chậm
+
+Đâu không phải là kiến trúc của ClouSim
+User-Code
+CloudSim
+SimJava
+* GirlSim
+
+Trong điện troán đám mây, CaaS có nghĩa là gì?
+Nền tảng như là dịch vụ
+Phần mềm như là dịch vụ
+* Giao tiếp như là dịch vụ
+Cơ sở hạ tầng như là dịch vụ
+
+Virtual Machine Ware (VMware) là một ví dụ về ….
+* Dịch vụ cơ sở hạ tầng
+Dịch vụ nền tảng
+Dịch vụ phần mềm
+Dịch vụ khác
+
+HTML là gì?
+Là ngôn ngữ kịch bản bạn có thể sử dụng để thêm tương tác cho ứng dụng
+Là ngôn ngữ sử dụng để viết các đặc tả tiện ích
+* Là ngôn ngữ đánh dấu để định dạng trang web
+Ngôn ngữ đánh dấu tổng quát của Google
+
+Công ty nào trong số này không phải là công ty hàng đầu về điện toán đám mây?
+Google
+Amazon
+* FPT
+Microsoft
+
+Điều nào sau đây thuộc sở hữu của một tổ chức bán dịch vụ đám mây?
+* Public
+Hybrid
+Private
+Community
+
+JSON là gì?
+Là ngôn ngữ đánh dấu siêu văn bản mở rộng
+* Là ký pháp đối tượng trong Java Script
+Là đối tượng để truyền thông không đồng bộ
+Là bảng định dạng kiểu theo tầng
+
+Điện toán đám mây là một hệ thống _______ và nó nhất thiết phải là một chiều về bản chất.
+* phi trạng thái
+đáng tin cậy
+có trạng thái
+tất cả những điều đã đề cập
+
+Python Django là gì?
+* Là một nền tảng web nguồn mở viết bằng Python
+Là một hệ quản trị nội dung web viết bằng Python
+Là một hệ thống máy chủ web phần cứng dựa trên Python
+Là ngôn ngữ lập trình Python
+
+Tất cả các ứng dụng điện toán đám mây đều mắc phải _______ vốn có trong kết nối WAN của chúng.
+tất cả những điều đã đề cập
+* độ trễ
+sự truyền bá
+tiếng ồn
+
+Một dịch vụ tập trung vào phần cứng tuân theo _________ như một mô hình Dịch vụ.
+CaaS (Container-as-a-Service)
+PaaS
+Tất cả những điều đã đề cập
+* IaaS
+
+Tiêu chuẩn kiến trúc nào sau đây phù hợp với ngành điện toán đám mây?
+Các dịch vụ Web được tiêu chuẩn hóa
+* Kiến trúc hướng dịch vụ
+Tất cả những điều đã đề cập
+Các khuôn khổ ứng dụng web
+
+Đâu là mô hình trả tiền cho mỗi lần sử dụng, là một cơ sở hạ tầng đám mây với tất cả các dịch vụ có sẵn qua web.
+Community Cloud
+* Public Cloud
+Private Cloud
+Hybrid Cloud
+
+_________ as a Service là một cơ sở hạ tầng điện toán đám mây tạo ra một môi trường phát triển mà các ứng dụng có thể được xây dựng.
+Cơ sở hạ tầng (Infrastructure)
+Tất cả những điều đã đề cập ở trên
+Dịch vụ (Service)
+* Nền tảng (Platform)
+
+Dịch vụ đám mây có mối quan hệ -------với khách hàng của họ.
+Một chọi một
+* Một-nhiều
+Không có quan hệ
+Nhiều-nhiều
+
+Phương án nào sau đây không phải là đặc điểm chính của điện toán đám mây?
+Nền tảng là một Dịch vụ
+* Tính toàn vẹn dữ liệu cao
+Phần mềm như một dịch vụ
+Cơ sở hạ tầng như một dịch vụ
+
+Dịch vụ lưu trữ trên cloud có tên S3 là của hãng nào?
+* Amazon
+IBM
+Microsoft
+SaleForce
+
+Trong điện troán đám mây, IaaS có nghĩa là gì?
+Phần mềm như là dịch vụ
+Giao tiếp như là dịch vụ
+Nền tảng như là dịch vụ
+* Cơ sở hạ tầng như là dịch vụ
+
+Trong điện toán đám mây thuật ngữ Mạng là dịch vụ được viết tắt là:?
+IaaS
+CaaS
+PaaS
+* NaaS
+
+Điều nào sau đây là khái niệm cơ bản liên quan đến Đám mây?
+Tất cả những điều đã đề cập
+Độ tin cậy
+* Tính trừu tượng
+Năng suất
+
+Đâu Không phải là một thành phần trong nền tảng điện toán đám mây
+* Process
+Web Hosting Service
+Web Application Framework
+Ajax
+
+Đâu là dịch vụ Web hosting mà hãng Amazone cung cấp
+Amazon EC5
+Amazon EC3
+Amazon EC4
+* Amazon EC2
+
+Trong điện troán đám mây, SaaS có nghĩa là gì?
+Cơ sở hạ tầng như là dịch vụ
+* Phần mềm như là dịch vụ
+Nền tảng như là dịch vụ
+Giao tiếp như là dịch vụ
+
+______ cung cấp cung cấp các công cụ và môi trường phát triển để triển khai ứng dụng trên ứng dụng của nhà cung cấp khác.
+PaaS
+* SaaS
+CaaS (Container-as-a-Service)
+Tất cả những điều đã đề cập ở trên
+
+Chỉ ra phát biểu sai.
+Quy mô khổng lồ của các hệ thống điện toán đám mây được kích hoạt bởi sự phổ biến của Internet
+Điện toán đám mây biến ước mơ từ lâu về điện toán tiện ích có thể thực hiện được với một hệ thống trả tiền tùy theo nhu cầu, khả năng mở rộng vô hạn, có sẵn trên toàn cầu
+Tất cả những điều đã đề cập trên
+* Máy tính mềm thể hiện một sự thay đổi mô hình thực sự trong cách thức triển khai các hệ thống
